@@ -9,20 +9,21 @@
     <title>MyFoodie</title>
 </head>
 <body>
-    <header>
-        <div class="nav_logo">
-            <h1>MyFoodie</h1>
-        </div>
-        <i class="ri-menu-line"></i>
-        <div class="nav_links">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Menu</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+<header>
+    <div class="nav_logo">
+        <h1>MyFoodie</h1>
+    </div>
+    <i class="ri-menu-line" id="menuIcon" aria-label="Menu"></i>
+    <div class="nav_links" id="navLinks">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</header>
+
     <section class="hero">
         <div class="hero_img">
             <img src="./images/hero.png" alt="">
@@ -32,9 +33,47 @@
             <button>Reserved Now</button>
         </div>
     </section>
+
+    <section class="top-deals">
+        <div class="td-heading">
+            <h1>Our Top Items</h1>
+        </div>
+        <div class="wrapper">
+            <div class="wrp-cards">
+                <div class="wrp-cards-img">
+                    <img src="./images/top1.png" alt="">
+                </div>
+                <div class="wrp-cards-txt">
+                    <span>Chill & Thrill: The Perfect Coffee Pair for Every Mood!</span>
+                    <button>Order Now</button>
+                </div>
+            </div>
+            <div class="wrp-cards">
+                <div class="wrp-cards-img">
+                    <img src="./images/top2.png" alt="">
+                </div>
+                <div class="wrp-cards-txt">
+                    <span>Sweet Bliss in Every Bite: The Ultimate Strawberry Dream!</span>
+                    <button>Order Now</button>
+                </div>
+            </div>
+            <div class="wrp-cards">
+                <div class="wrp-cards-img">
+                    <img src="./images/top3.png" alt="">
+                </div>
+                <div class="wrp-cards-txt">
+                    <span>Top Taste, Top Satisfaction: The Ultimate Burger & Snack Combo!</span>
+                    <button>Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <span>All Rights Reserved - @Muhammad Kamil</span>
         <span>Karachi, Sindh, Pakistan</span>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
