@@ -6,7 +6,7 @@
 }
 body{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     font-family: "Poppins", sans-serif;
     background-color: #F9F9F9;
     color: #2B2B2B;
@@ -18,7 +18,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3vmax;
+    padding: 2vmax 3vmax;
     background-color: #F9F9F9;
     box-shadow: 0 0 20px #EDEDED;
 }
@@ -46,59 +46,11 @@ header i{
     font-weight: 400;
     text-decoration: none;
 }
-.hero{
-    width: 100%;
-    height: 85%;
-    margin: 3vmax 0;
-    padding: 0 3vmax;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #EDEDED;
-}
-.hero_img{
-    width: 45%;
-    height: 100%;
-}
-.hero_img img{
-    width: 100%;
-    height: 100%;
-}
-.hero_txt{
-    width: 55%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.hero_txt span{
-    font-size: 3vmax;
-    font-weight: 600;
-    margin-bottom: 2vmax;
-}
-.hero_txt button{
-    margin-top: 2vmax;
-    padding: 2vmax 3vmax;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    background-color: #2B2B2B;
-    color: #F9F9F9;
-    font-size: 1.5vmax;
-}
-.hero_txt button:hover{
-    background-color: #EDEDED;
-    border: 1px solid #2B2B2B;
-    color: #2B2B2B;
-    transform: translateY(-5px);
-    transition: all 0.3s ease-in;
-}
 .top-deals{
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: 3vmax 0;
-    padding: 0 3vmax;
+    padding: 2vmax 3vmax;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,31 +63,34 @@ header i{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 2vmax;
     /* background-color: red; */
     font-size: 1.5vmax;
 }
-.wrapper{
+.wrapper {
     width: 100%;
-    height: 85%;
+    height: auto; /* let height be dynamic */
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 2vmax;
-    /* background-color: blueviolet; */
+    flex-wrap: wrap; /* allow wrapping */
+    align-items: flex-start; /* align cards at top */
+    justify-content: center; /* center horizontally */
+    gap: 2vmax; /* spacing between cards */
 }
-.wrp-cards{
-    width: 30%;
-    height: 90%;
+.wrp-cards {
+    /* Instead of fixed 30%, use a flexible width */
+    flex: 1 1 280px; /* grow, shrink, base width */
+    max-width: 320px; /* max card width */
+    height: 30vmax; /* dynamic height based on content */
     background-color: #F9F9F9;
     box-shadow: 0 0 20px #EDEDED;
-    /* border: 5px solid #F9F9F9; */
-    padding: 0 1vmax;
+    padding: 1vmax;
     border-radius: 15px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in;
 }
 .wrp-cards:hover{
     transform: scale(1.05);
@@ -163,7 +118,7 @@ header i{
     /* background-color: orangered; */
 }
 .wrp-cards-txt span{
-    font-size: 1.5vmax;
+    font-size: 1.3vmax;
 }
 .wrp-cards-txt button{
     padding: 1.5vmax 4vmax;
@@ -190,10 +145,18 @@ footer{
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 20px #EDEDED;
+    padding: 2vmax 3vmax;
 }
 footer span{
     font-size: 1.2vmax;
 }
+
+
+
+
+
+
+
 
 
 
@@ -262,29 +225,7 @@ footer span{
     .overlay.show {
         display: block;
     }
-    .hero{
-        height: 75%;
-        flex-direction: column;
-    }
-    .hero_img{
-        width: 100%;
-        height: 50%;
-    }
-    .hero_txt{
-        width: 100%;
-        height: 50%;
-        justify-content: center;
-    }
-    .hero_txt span{
-        font-size: 4vmax;
-        text-align: center;
-        margin-bottom: 0;
-    }
-    .hero_txt button{
-        padding: 2vmax 4vmax;
-        font-size: 2vmax;
-    }
-    footer span{
+     footer span{
         font-size: 1.5vmax;
     }
     .top-deals{
@@ -295,12 +236,15 @@ footer span{
         font-size: 2.2vmax;
     }
     .wrapper{
-        height: 95%;
         flex-direction: column;
+        gap: 3vmax;
+        height: auto;
     }
     .wrp-cards{
-        width: 100%;
-        height: 30%;
+        width: 90%; /* full width on mobile */
+        margin: auto;
+        max-width: 100%;
+        height: auto;
     }
     .wrp-cards-txt span{
         font-size: 2vmax;
